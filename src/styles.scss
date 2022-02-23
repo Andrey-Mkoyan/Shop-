@@ -1,1 +1,12 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.wrapper {
+  width: 100%;
+}
+.container {
+  width: 85%;
+  margin: 0 7.5% 0 7.5%;
+}
