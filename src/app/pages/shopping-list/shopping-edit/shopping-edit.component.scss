@@ -1,0 +1,51 @@
+form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.form-row {
+  display: flex;
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  .form-group-1 {
+    margin-right: 40px;
+  }
+  .form-group-2 {
+    width: 80px;
+  }
+
+  .form-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .btn-submit {
+      cursor: pointer;
+      width: 50px;
+      height: 35px;
+      color: white;
+      border-radius: 10px;
+      background: rgb(17, 0, 167);
+    }
+    .btn-delete {
+      cursor: pointer;
+      width: 70px;
+      height: 35px;
+      color: white;
+      border-radius: 10px;
+      background: rgb(167, 0, 0);
+    }
+    .btn-clear {
+      cursor: pointer;
+      width: 50px;
+      height: 35px;
+      color: white;
+      border-radius: 10px;
+      background: rgb(0, 167, 64);
+    }
+  }
+
+}

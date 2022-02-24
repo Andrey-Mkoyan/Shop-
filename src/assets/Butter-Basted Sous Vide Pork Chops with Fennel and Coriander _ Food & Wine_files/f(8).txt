@@ -1,0 +1,1 @@
+_gfp_s_({"_cookies_":[{"_value_":"ID=23afc8a5a3fea676-22098ad94bcd0098:T=1645696848:RT=1645696902:S=ALNI_MYKcQKU315s5_3Le6IksN2fpvU71Q","_expires_":1679392848,"_path_":"/","_domain_":"foodandwine.com","_version_":1}]});
