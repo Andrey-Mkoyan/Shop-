@@ -1,1 +1,30 @@
-<p>recipe-detail works!</p>
+<div class="row">
+  <div class="img">
+    <img src="" alt="" class="image">
+  </div>
+</div>
+<div class="row">
+  <div class="title">
+    <h1>Recipe Name</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="btn-group">
+    <button mat-button [matMenuTriggerFor]="menu">Manage Recipe</button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item><a href="">To Shopping List</a></button>
+      <button mat-menu-item><a href="">Edit Recipe</a></button>
+      <button mat-menu-item><a href="">Delete Recipe</a></button>
+    </mat-menu>
+  </div>
+</div>
+<div class="row">
+  <div class="desc">
+    description
+  </div>
+</div>
+<div class="row">
+  <div class="ingredients">
+    ingredients
+  </div>
+</div>

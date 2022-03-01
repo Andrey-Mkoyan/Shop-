@@ -10,6 +10,8 @@ import { RecipeDetailComponent } from './pages/recipes/recipe-detail/recipe-deta
 import { RecipeItemComponent } from './pages/recipes/recipe-list/recipe-item/recipe-item.component';
 import { ShoppingListComponent } from './pages/shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './pages/shopping-list/shopping-edit/shopping-edit.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { ShoppingEditComponent } from './pages/shopping-list/shopping-edit/shopp
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
