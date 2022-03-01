@@ -6,16 +6,11 @@ import { Ingredient } from 'src/app/shared/ingredient.model';
   templateUrl: './shopping-list.component.html',
   styleUrls: ['./shopping-list.component.scss']
 })
-export class ShoppingListComponent implements OnInit {
+export class ShoppingListComponent {
   ingredients: Ingredient[] = [
     new Ingredient('Apples', 5),
     new Ingredient('Tomatos', 10),
   ];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
   onIngredientAdded(ingredient: Ingredient) {
     this.ingredients.push(ingredient);
