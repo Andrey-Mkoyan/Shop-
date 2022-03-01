@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,6 +14,7 @@ import { ShoppingEditComponent } from './pages/shopping-list/shopping-edit/shopp
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +27,7 @@ import {MatMenuModule} from '@angular/material/menu';
     ShoppingEditComponent,
   ],
   imports: [
+    FormsModule ,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

@@ -1,0 +1,18 @@
+.list-item {
+  a {
+    display: flex;
+    justify-content: space-between;
+    padding: 1%;
+    border: 1px solid rgba(82, 82, 82, 0.2);
+    h3 {
+      color: black;
+    }
+    p {
+      margin-top: 5px;
+      color: black;
+    }
+  }
+  a:hover {
+    background: rgb(231, 231, 231);
+  }
+}
