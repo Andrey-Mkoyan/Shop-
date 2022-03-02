@@ -20,6 +20,9 @@
     .header-logo {
       a {
         color: #000;
+        h2 {
+          margin: 0;
+        }
       }
     }
     .navbar-collapse {
@@ -32,6 +35,16 @@
           font-size: 18px;
           color: #000;
         }
+      }
+    }
+  }
+  .right {
+    ::ng-deep {
+      .mat-menu-trigger{
+        cursor: pointer;
+        border: none !important;
+        background: none;
+        font-size: 18px;
       }
     }
   }

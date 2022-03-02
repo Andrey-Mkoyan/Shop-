@@ -24,7 +24,7 @@ import {MatMenuModule} from '@angular/material/menu';
     RecipeDetailComponent,
     RecipeItemComponent,
     ShoppingListComponent,
-    ShoppingEditComponent,
+    ShoppingEditComponent
   ],
   imports: [
     FormsModule ,

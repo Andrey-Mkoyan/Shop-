@@ -11,6 +11,14 @@
         </div>
       </div>
     </div>
-    <div class="right"></div>
+    <div class="right">
+      <div class="btn-group">
+        <button mat-button [matMenuTriggerFor]="menu">Manage</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item><a href="">Save Data</a></button>
+          <button mat-menu-item><a href="">Fetch Data</a></button>
+        </mat-menu>
+      </div>
+    </div>
   </div>
 </nav>
