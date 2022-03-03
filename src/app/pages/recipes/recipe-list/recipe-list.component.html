@@ -3,8 +3,7 @@
 </div>
 <div class="row item-row">
   <app-recipe-item
-  *ngFor="let recipeEl of recipes"
-  [recipe]="recipeEl"
-  (recipeSelected)="onRecipeSelected(recipeEl)"></app-recipe-item>
+  *ngFor="let item of recipes"
+  [recipe]="item"></app-recipe-item>
 </div>
 
