@@ -15,6 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
 import { RecipeService } from './shared/services/recipe.service';
 import { ShoppingListService } from './shared/services/shopping-list.service';
+import { RecipeStartComponent } from './pages/recipes/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './pages/recipes/recipe-edit/recipe-edit.component';
 
 
 @NgModule({
@@ -26,7 +28,9 @@ import { ShoppingListService } from './shared/services/shopping-list.service';
     RecipeDetailComponent,
     RecipeItemComponent,
     ShoppingListComponent,
-    ShoppingEditComponent
+    ShoppingEditComponent,
+    RecipeStartComponent,
+    RecipeEditComponent
   ],
   imports: [
     FormsModule ,
