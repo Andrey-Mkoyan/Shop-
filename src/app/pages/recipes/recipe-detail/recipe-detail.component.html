@@ -12,9 +12,9 @@
   <div class="btn-group">
     <button mat-button [matMenuTriggerFor]="menu">Manage Recipe</button>
     <mat-menu #menu="matMenu">
-      <button mat-menu-item><a href="">To Shopping List</a></button>
-      <button mat-menu-item><a href="">Edit Recipe</a></button>
-      <button mat-menu-item><a href="">Delete Recipe</a></button>
+      <button mat-menu-item><a (click)="onAddToShoppingList()" style="cursor: pointer;">To Shopping List</a></button>
+      <button mat-menu-item><a (click)="onEditRecipe()">Edit Recipe</a></button>
+      <button mat-menu-item><a>Delete Recipe</a></button>
     </mat-menu>
   </div>
 </div>
@@ -24,7 +24,8 @@
   </div>
 </div>
 <div class="row">
-  <div class="ingredients">
-    ingredients
+  <h3>Ingredients</h3>
+  <div class="ingredients" *ngFor="let item of recipe.ingredients">
+    {{ item.name }} - {{ item.amount }}
   </div>
 </div>

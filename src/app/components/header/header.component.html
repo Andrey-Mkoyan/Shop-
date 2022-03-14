@@ -2,15 +2,23 @@
   <div class="header_container">
     <div class="left">
       <div class="header-logo">
-        <a href="#"><h2>Recipe Book</h2></a>
+        <a routerLink="" ><h2>Recipe Book</h2></a>
       </div>
       <div class="navbar-collapse">
         <div class="nav">
-          <a href="#" (click)="onSelect('recipe')">Recipes</a>
-          <a href="#" (click)="onSelect('shopping-list')">Shopping List</a>
+          <a routerLinkActive="active" routerLink="/recipes" >Recipes</a>
+          <a routerLinkActive="active" routerLink="/shopping-list" >Shopping List</a>
         </div>
       </div>
     </div>
-    <div class="right"></div>
+    <div class="right">
+      <div class="btn-group">
+        <button mat-button [matMenuTriggerFor]="menu">Manage</button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item><a>Save Data</a></button>
+          <button mat-menu-item><a>Fetch Data</a></button>
+        </mat-menu>
+      </div>
+    </div>
   </div>
 </nav>

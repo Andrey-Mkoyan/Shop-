@@ -13,6 +13,10 @@ import { ShoppingListComponent } from './pages/shopping-list/shopping-list.compo
 import { ShoppingEditComponent } from './pages/shopping-list/shopping-edit/shopping-edit.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatMenuModule} from '@angular/material/menu';
+import { RecipeService } from './shared/services/recipe.service';
+import { ShoppingListService } from './shared/services/shopping-list.service';
+import { RecipeStartComponent } from './pages/recipes/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './pages/recipes/recipe-edit/recipe-edit.component';
 
 
 @NgModule({
@@ -25,6 +29,8 @@ import {MatMenuModule} from '@angular/material/menu';
     RecipeItemComponent,
     ShoppingListComponent,
     ShoppingEditComponent,
+    RecipeStartComponent,
+    RecipeEditComponent
   ],
   imports: [
     FormsModule ,
@@ -33,7 +39,10 @@ import {MatMenuModule} from '@angular/material/menu';
     BrowserAnimationsModule,
     MatMenuModule
   ],
-  providers: [],
+  providers: [
+    RecipeService,
+    ShoppingListService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
