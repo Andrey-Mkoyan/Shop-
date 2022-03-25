@@ -15,8 +15,8 @@
       <div class="btn-group">
         <button mat-button [matMenuTriggerFor]="menu">Manage</button>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item><a>Save Data</a></button>
-          <button mat-menu-item><a>Fetch Data</a></button>
+          <button mat-menu-item (click)="onSaveData()"><a>Save Data</a></button>
+          <button mat-menu-item (click)="onFetchData()"><a>Fetch Data</a></button>
         </mat-menu>
       </div>
     </div>

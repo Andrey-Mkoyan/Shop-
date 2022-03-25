@@ -14,7 +14,7 @@
     <mat-menu #menu="matMenu">
       <button mat-menu-item><a (click)="onAddToShoppingList()" style="cursor: pointer;">To Shopping List</a></button>
       <button mat-menu-item><a (click)="onEditRecipe()">Edit Recipe</a></button>
-      <button mat-menu-item><a>Delete Recipe</a></button>
+      <button mat-menu-item (click)="onDelete()"><a>Delete Recipe</a></button>
     </mat-menu>
   </div>
 </div>
