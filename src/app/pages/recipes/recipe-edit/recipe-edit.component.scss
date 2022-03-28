@@ -1,0 +1,93 @@
+.container {
+  margin-top: 30px;
+  input {
+    height: 40px;
+    border-radius: 10px;
+  }
+  textarea {
+    border-radius: 10px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 600px;
+  }
+}
+.container_row {
+  .form-group {
+    display: flex;
+    flex-direction: column ;
+  }
+}
+
+.row_div {
+  display: flex;
+  gap: 10px;
+}
+.submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 40px;
+  background: rgb(0, 105, 0);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.cancel-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 40px;
+  background: rgb(139, 22, 22);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.btn_x {
+  background: red;
+  color: white;
+  border: none;
+  width: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.number_input {
+  width: 100px;
+}
+.last_input {
+  width: 425px;
+}
+.ingredient_div {
+  display: flex;
+  flex-direction: column;
+}
+input, textarea {
+  padding-left: 10px;
+}
+.add_btn {
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    border: none;
+    background: rgb(0, 105, 0);
+  }
+}
+input.ng-invalid.ng-tuched,
+textarea.ng-invalid.ng-tuched {
+  border: 1px solid red;
+}
+.img {
+  width: 500px;
+}

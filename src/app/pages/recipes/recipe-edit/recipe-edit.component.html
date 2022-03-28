@@ -1,1 +1,46 @@
-<p>recipe-edit works!</p>
+<div class="row">
+  <div class="container">
+    <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+      <div class="row_div">
+        <button type="submit" class="submit-btn" [disabled]="!recipeForm.valid">Save</button>
+        <button type="button" class="cancel-btn" (click)="onCancel()">Cancel</button>
+      </div>
+      <div class="container_row">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" formControlName="name">
+        </div>
+      </div>
+      <div class="container_row">
+        <div class="form-group">
+          <label for="imagePath">Image URL</label>
+          <input type="text" formControlName="imagePath" #imagePath>
+        </div>
+      </div>
+      <div class="container_row">
+        <img [src]="imagePath.value" class="img">
+      </div>
+      <div class="container_row">
+        <div class="form-group">
+          <label for="description">Description</label>
+          <textarea rows="6" formControlName="description"></textarea>
+        </div>
+      </div>
+      <div class="row_div ingredient_div" formArrayName="ingredients">
+          <div *ngFor="let ingredientCtrl of getControls(); let i = index" [formGroupName]="i">
+            <div style="display: flex; gap: 10px;">
+              <input type="text" class="last_input" formControlName="name">
+              <input type="number" class="number_input" formControlName="amount">
+              <button class="btn_x" type="button" (click)="onDeleteIngredient(i)">X</button>
+            </div>
+          </div>
+      </div>
+      <hr>
+      <div class="container_row">
+        <div class="add_btn">
+          <button type="button" (click)="onAddIngredient()">Add Ingredient</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
