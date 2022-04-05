@@ -18,12 +18,11 @@
     flex-wrap: wrap;
     gap: 40px;
     .header-logo {
-      a {
+      h2 {
+        margin: 0;
         color: #000;
-        h2 {
-          margin: 0;
-        }
       }
+
     }
     .navbar-collapse {
       display: flex;
@@ -52,4 +51,20 @@
 
 .active {
   background: rgb(252, 252, 252);
+}
+
+.btn-group {
+  display: flex;
+  gap: 40px;
+  .logout {
+    cursor: pointer;
+    background: rgb(231, 231, 231);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    a {
+      font-size: 18px;
+    }
+  }
 }

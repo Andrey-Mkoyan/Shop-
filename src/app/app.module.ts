@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,6 +18,12 @@ import { RecipeService } from './shared/services/recipe.service';
 import { ShoppingListService } from './shared/services/shopping-list.service';
 import { RecipeStartComponent } from './pages/recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './pages/recipes/recipe-edit/recipe-edit.component';
+import { AuthComponent } from './auth/auth.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { LoadingComponent } from './shared/loading-spinner/loading.component';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { AuthInterceptorService } from './shared/services/auth-interceptor.service';
+
 
 
 @NgModule({
@@ -31,7 +37,9 @@ import { RecipeEditComponent } from './pages/recipes/recipe-edit/recipe-edit.com
     ShoppingListComponent,
     ShoppingEditComponent,
     RecipeStartComponent,
-    RecipeEditComponent
+    RecipeEditComponent,
+    AuthComponent,
+    LoadingComponent,
   ],
   imports: [
     FormsModule ,
@@ -40,11 +48,18 @@ import { RecipeEditComponent } from './pages/recipes/recipe-edit/recipe-edit.com
     BrowserAnimationsModule,
     MatMenuModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSnackBarModule,
+    MatProgressSpinnerModule,
   ],
   providers: [
     RecipeService,
-    ShoppingListService
+    ShoppingListService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptorService,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
