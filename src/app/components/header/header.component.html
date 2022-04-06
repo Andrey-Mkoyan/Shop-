@@ -2,17 +2,19 @@
   <div class="header_container">
     <div class="left">
       <div class="header-logo">
-        <a routerLink="" ><h2>Recipe Book</h2></a>
+        <h2>Recipe Book</h2>
       </div>
       <div class="navbar-collapse">
         <div class="nav">
-          <a routerLinkActive="active" routerLink="/recipes" >Recipes</a>
-          <a routerLinkActive="active" routerLink="/shopping-list" >Shopping List</a>
+          <a *ngIf="isAuthenticated" routerLinkActive="active" routerLink="/recipes" >Recipes</a>
+          <a *ngIf="!isAuthenticated" routerLinkActive="active" routerLink="/auth" >Authenticate </a>
+          <a *ngIf="isAuthenticated" routerLinkActive="active" routerLink="/shopping-list" >Shopping List</a>
         </div>
       </div>
     </div>
     <div class="right">
-      <div class="btn-group">
+      <div *ngIf="isAuthenticated" class="btn-group">
+        <button (click)="onLogout()" class="logout"><a>Logout</a></button>
         <button mat-button [matMenuTriggerFor]="menu">Manage</button>
         <mat-menu #menu="matMenu">
           <button mat-menu-item (click)="onSaveData()"><a>Save Data</a></button>
