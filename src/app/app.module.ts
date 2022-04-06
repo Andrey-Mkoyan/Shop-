@@ -23,6 +23,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { LoadingComponent } from './shared/loading-spinner/loading.component';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { AuthInterceptorService } from './shared/services/auth-interceptor.service';
+import { AlertComponent } from './shared/alert/alert.component';
 
 
 
@@ -40,6 +41,7 @@ import { AuthInterceptorService } from './shared/services/auth-interceptor.servi
     RecipeEditComponent,
     AuthComponent,
     LoadingComponent,
+    AlertComponent
   ],
   imports: [
     FormsModule ,
