@@ -3,6 +3,7 @@
   align-items: center;
   height: 70px;
   background: rgb(231, 231, 231);
+
 }
 
 .header_container {
@@ -31,6 +32,7 @@
         flex-wrap: wrap;
         gap: 40px;
         a {
+          cursor: pointer;
           font-size: 18px;
           color: #000;
         }
