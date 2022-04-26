@@ -8,7 +8,7 @@ import { ShoppingListService } from "./shopping-list.service";
 @Injectable()
 export class RecipeService {
   recipesChanged = new Subject<Recipe[]>();
-    recipes: Recipe[] = [];
+  recipes: Recipe[] = [];
 
   constructor(private slService: ShoppingListService) {}
 
